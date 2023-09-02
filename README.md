@@ -1,7 +1,7 @@
 # Spring PetClinic Sample Application  
 # Modified By AJAY KUAMR YEGIREDDI  https://www.youtube.com/@mr.cloudbook
 
-
+<div align="center"> <img src="https://raw.githubusercontent.com/Aj7Ay/Petclinic/main/Ajay1.png"> </div>
 [![Java CI with Maven](https://github.com/spring-petclinic/spring-framework-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-petclinic/spring-framework-petclinic/actions/workflows/maven-build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=spring-petclinic_spring-framework-petclinic&metric=alert_status)](https://sonarcloud.io/dashboard?id=spring-petclinic_spring-framework-petclinic)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=spring-petclinic_spring-framework-petclinic&metric=coverage)](https://sonarcloud.io/dashboard?id=spring-petclinic_spring-framework-petclinic)
