@@ -20,11 +20,17 @@
     - name: tag image
       command: docker tag petclinic7:latest sevenajay/petclinic7:latest
 
+    - name: Include Ansible Vault Secrets
+      include_vars:
+        file: secrets.yml
+        name: secrets
+        vault_password_file: /var/lib/jenkins/workspace/Ansible/
+
     - name: Log in to Docker Hub
       docker_login:
         registry_url: https://index.docker.io/v1/
-        username: sevenajay
-        password: 9985908052Aj
+        username: "{{ secrets.docker_hub_username }}"
+        password: "{{ secrets.docker_hub_password }}"
       register: docker_login_result  
 
     - name: Push image
