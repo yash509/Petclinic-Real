@@ -12,6 +12,9 @@
         name: docker.io
         state: present
         
-    - name: build docker image 
-      command: docker build -t petclinic7 .
+    - name: Build Docker Image
+      docker_image:
+        name: petclinic7  # Specify your image name
+        source: build
+        path: .
       
