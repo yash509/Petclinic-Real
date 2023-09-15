@@ -23,7 +23,6 @@
     - name: Include Ansible Vault Secrets
       include_vars:
         file: secrets.yml
-        name: secrets
 
     - name: Log in to Docker Hub
       docker_login:
