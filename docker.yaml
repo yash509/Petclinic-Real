@@ -1,0 +1,19 @@
+- name: Install Docker on Ubuntu
+  hosts: local  # Replace with the hostname or IP address of your target server
+  become: yes  # Run tasks with sudo privileges
+
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+    
+
+    - name: Build Docker Image
+      command: docker build -t petclinic77:latest .
+      args:
+        creates: /opt/Docker
