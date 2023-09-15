@@ -12,9 +12,8 @@
         name: docker.io
         state: present
         
-    - name: Build Docker Image
-      docker_image:
-        name: petclinic7  # Specify your image name
-        source: build
-        path: .
+   - name: Build Docker Image
+      command: docker build -t petclinic7 .
+      args:
+        chdir: /var/lib/jenkins/workspace/Ansible/
       
