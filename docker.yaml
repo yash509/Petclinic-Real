@@ -24,7 +24,7 @@
       docker_login:
         registry_url: https://index.docker.io/v1/
         username: sevenajay
-        password: dckr_pat_n3rrKF4kgVcDuAYjmjqjEJWg6eg
+        password: xxxxxxxxxxxxxxxxxx
       register: docker_login_result  
 
     - name: Push image
