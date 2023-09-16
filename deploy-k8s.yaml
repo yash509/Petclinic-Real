@@ -6,7 +6,7 @@
   tasks:
     - name: copy deployment to kubernetes master
       copy: 
-        src:
+        src: deployment.yaml
         dest: /home/ubuntu/
       args:
         chdir: /var/lib/jenkins/workspace/Ansible/
