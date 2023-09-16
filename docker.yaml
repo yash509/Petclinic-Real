@@ -29,4 +29,7 @@
 
     - name: Push image
       command: docker push sevenajay/petclinic7:latest
+
+    - name: Run container
+      command: docker run -d --name pet1 -p 8081:8080 sevenajay/petclinic7:latest
       
