@@ -4,12 +4,12 @@
   gather_facts: no
 
   tasks:
-    - name: copy deployment to kubernetes master
-      copy: 
+    - name: Copy deployment.yaml to Kubernetes master
+      copy:
         src: deployment.yaml
-        dest: /home/ubuntu/
-      args:
-        chdir: /var/lib/jenkins/workspace/Ansible/
-        
+        dest: /home/ubuntu/deployment.yaml
+        remote_src: yes
+      become: yes  # You might need elevated privileges to write to this directory
+
     - name: Apply Deployment
       command: kubectl apply -f /home/ubuntu/deployment.yaml
