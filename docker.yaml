@@ -13,10 +13,10 @@
         state: present
         
     - name: Source environment variables from .env file
-      ansible.builtin.shell: |/var/lib/jenkins/workspace/Ansible/
+      ansible.builtin.shell: |
         source .env
       args:
-        chdir:     
+        chdir: /var/lib/jenkins/workspace/Ansible/    
         
     - name: Build Docker Image
       command: docker build -t petclinic7 .
