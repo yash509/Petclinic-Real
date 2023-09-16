@@ -13,10 +13,10 @@
         state: present
         
     - name: Source environment variables from .env file
-      ansible.builtin.shell: |
+      ansible.builtin.shell: |/var/lib/jenkins/workspace/Ansible/
         source .env
       args:
-        chdir: /var/lib/jenkins/workspace/Ansible/    
+        chdir:     
         
     - name: Build Docker Image
       command: docker build -t petclinic7 .
@@ -27,9 +27,11 @@
       command: docker tag petclinic7:latest sevenajay/petclinic7:latest
 
     - name: Log in to Docker Hub
-      ansible.builtin.command: docker login -u "$DOCKER_HUB_USERNAME" -p "$DOCKER_HUB_PASSWORD"
-      args:
-        executable: /bin/bash  
+      docker_login:
+        registry_url: https://index.docker.io/v1/
+        username: sevenajay
+        password: dckr_pat_n3rrKF4kgVcDuAYjmjqjEJWg6eg
+      register: docker_login_result  
 
     - name: Push image
       command: docker push sevenajay/petclinic7:latest
