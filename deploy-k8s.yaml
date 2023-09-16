@@ -1,15 +1,8 @@
 ---
 - name: Apply Kubernetes Deployment
   hosts: k8s
-  gather_facts: no
+  gather_facts: yes
 
   tasks:
-    - name: Copy deployment.yaml to Kubernetes master
-      copy:
-        src: deployment.yaml
-        dest: /home/ubuntu/deployment.yaml
-        remote_src: yes
-      become: yes  # You might need elevated privileges to write to this directory
-
     - name: Apply Deployment
-      command: kubectl apply -f /home/ubuntu/deployment.yaml
+      command: kubectl apply -f /var/lib/jenkins/workspace/Ansible/deployment.yaml
