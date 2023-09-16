@@ -1,0 +1,9 @@
+---
+- name: Apply Kubernetes Deployment
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Apply Deployment
+      community.kubernetes.k8s:
+        src: /var/lib/jenkins/workspace/Ansible/deployment.yaml
