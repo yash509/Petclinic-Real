@@ -1,9 +1,15 @@
 ---
 - name: Apply Kubernetes Deployment
-  hosts: localhost
+  hosts: k8s
   gather_facts: no
 
   tasks:
+    - name: copy deployment to kubernetes master
+      copy: 
+        src:
+        dest: /home/ubuntu/
+      args:
+        chdir: /var/lib/jenkins/workspace/Ansible/
+        
     - name: Apply Deployment
-      community.kubernetes.k8s:
-        src: /var/lib/jenkins/workspace/Ansible/deployment.yaml
+      command: kubectl apply -f /home/ubuntu/deployment.yaml
