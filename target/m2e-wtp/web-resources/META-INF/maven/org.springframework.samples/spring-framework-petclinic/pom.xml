@@ -23,40 +23,40 @@
         <!-- Spring -->
         <!-- For framework compatibility, refer to the Spring Boot Dependencies BOM -->
         <!-- https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-dependencies/build.gradle -->
-        <spring-framework.version>5.3.18</spring-framework.version>
+        <spring-framework.version>5.3.39</spring-framework.version>
 
         <!-- Web dependencies -->
         <!-- Version update should also be done in wro.xml, petclinic.less and static resources: htmlHeader.tag and footer.tag-->
-        <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
-        <webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
-        <webjars-jquery.version>3.5.1</webjars-jquery.version>
+        <webjars-bootstrap.version>3.4.1</webjars-bootstrap.version>
+        <webjars-jquery-ui.version>1.13.3</webjars-jquery-ui.version>
+        <webjars-jquery.version>3.7.1</webjars-jquery.version>
         <wro4j.version>1.8.0</wro4j.version> <!-- wro4j 1.0.0 requires Java 9 -->
 
         <!-- Java EE / Java SE dependencies -->
-        <tomcat.version>9.0.46</tomcat.version>
+        <tomcat.version>9.0.93</tomcat.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
-        <jaxb-runtime.version>2.3.4</jaxb-runtime.version>
+        <jaxb-runtime.version>2.3.9</jaxb-runtime.version>
         <javax-activation.version>1.2.0</javax-activation.version>
         <servlet-api.version>4.0.4</servlet-api.version>
         <taglibs-standard.version>1.2.5</taglibs-standard.version>
 
         <!-- Persistence -->
         <spring-data.version>2021.1.0-RC1</spring-data.version>
-        <hibernate.version>5.6.0.Final</hibernate.version>
-        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
+        <hibernate.version>5.6.15.Final</hibernate.version>
+        <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
         <hsqldb.version>2.5.2</hsqldb.version>
         <h2database.version>1.4.200</h2database.version>
 
         <!-- Logging -->
-        <slf4j.version>1.7.32</slf4j.version>
-        <logback.version>1.2.6</logback.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <logback.version>1.5.7</logback.version>
 
         <!-- Test -->
         <assertj.version>3.21.0</assertj.version>
         <json-path.version>2.6.0</json-path.version>
-        <mockito.version>4.0.0</mockito.version>
+        <mockito.version>4.11.0</mockito.version>
         <hamcrest.version>2.2</hamcrest.version>
-        <junit-jupiter.version>5.8.1</junit-jupiter.version>
+        <junit-jupiter.version>5.11.0</junit-jupiter.version>
 
         <!-- JDBC Drivers -->
         <mysql-driver.version>8.0.19</mysql-driver.version>
@@ -64,7 +64,7 @@
 
         <!-- Others -->
         <jackson.version>2.12.4</jackson.version>
-        <aspectj.version>1.9.7</aspectj.version>
+        <aspectj.version>1.9.22.1</aspectj.version>
 
         <!-- Maven plugins -->
         <jetty-maven-plugin.version>9.4.43.v20210629</jetty-maven-plugin.version>
